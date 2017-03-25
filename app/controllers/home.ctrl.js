@@ -7,10 +7,9 @@
 
 export default class HomeController {
 
-	/*@ngInject;*/
-	constructor(PersonService) {
-		PersonService.getPerson().then(person => {
-			this.person = person;
+	constructor(userService) {
+		userService.getuser().then(user => {
+			this.user = user;
 		});
 	}
 
