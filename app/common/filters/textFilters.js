@@ -2,15 +2,15 @@
 
 export default class TextFilters {
 
-	UpperFilter() {
-		return function(input) {
-			return input.toUpperCase()
-		}
-	}
+  UpperFilter () {
+    return function (input) {
+      return input.toUpperCase()
+    }
+  }
 
-	LowerFilter() {
-		return function(input) {
-			return input.toLowerCase()
-		}
-	}
+  LowerFilter () {
+    return function (input) {
+      return input.toLowerCase()
+    }
+  }
 }

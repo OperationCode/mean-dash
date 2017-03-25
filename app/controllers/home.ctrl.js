@@ -7,10 +7,10 @@
 
 export default class HomeController {
 
-	constructor(userService) {
-		userService.getuser().then(user => {
-			this.user = user;
-		});
-	}
+  constructor (userService) {
+    userService.getuser().then(user => {
+      this.user = user
+    })
+  }
 
 }

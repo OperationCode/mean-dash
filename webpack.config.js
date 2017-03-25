@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+var webpack = require('webpack')
 
 var config = {
   context: __dirname + '/app',
@@ -22,12 +22,12 @@ var config = {
       {test: /\.scss$/, loader: 'style!css!sass-loader', exclude: /node_modules/}
     ]
   }
-};
-
-if (process.env.NODE_ENV === 'production') {
-  config.output.path = __dirname + '/public';
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
-  config.devtool = 'source-map';
 }
 
-module.exports = config;
+if (process.env.NODE_ENV === 'production') {
+  config.output.path = __dirname + '/public'
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin())
+  config.devtool = 'source-map'
+}
+
+module.exports = config
