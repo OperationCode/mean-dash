@@ -3,7 +3,6 @@ var express = require('express')
 var request = require('supertest')
 
 let describe = () => {
-
   describe('app', function () {
     it('should inherit from event emitter', function (done) {
       var app = express()

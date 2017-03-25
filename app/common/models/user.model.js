@@ -29,7 +29,7 @@ class UserModel {
     return this.currentUser
   }
 
-  getName () {
+  getUser () {
     return 'World'
   }
 }
