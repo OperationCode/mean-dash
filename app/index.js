@@ -2,11 +2,13 @@
   Import all Angular components via ES6 imports and register them
   at your module via their corresponding functions (controller, service, etc.).
 */
-import angular from 'angular'
-import HomeController from './controllers/home.ctrl'
-import UserService from './services/user.service'
-import CommonModule from './common/common'
+//import angular from 'angular'
 
-angular.module('app', [])
-	.controller('HomeController', HomeController)
-	.service('UserService', UserService)
+import CommonModule from './common/common'
+import registerFavoriteTeams from './components/demo'
+
+let ngModule = angular.module('app', ['ngMaterial', 'appCommon', 'favorite-teams'])
+	.component('commonModule', CommonModule)
+	.run (() => {
+		console.log('App is running!')
+	})
