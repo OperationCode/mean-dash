@@ -32711,7 +32711,7 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32724,13 +32724,13 @@
 	*/
 
 	var HomeController = function HomeController(userService) {
-		var _this = this;
+	  var _this = this;
 
-		_classCallCheck(this, HomeController);
+	  _classCallCheck(this, HomeController);
 
-		userService.getuser().then(function (user) {
-			_this.user = user;
-		});
+	  userService.getuser().then(function (user) {
+	    _this.user = user;
+	  });
 	};
 
 	exports.default = HomeController;
@@ -32742,7 +32742,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -32756,27 +32756,27 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var UserService = function () {
-		function UserService($q, $log) {
-			_classCallCheck(this, UserService);
+	  function UserService($q, $log) {
+	    _classCallCheck(this, UserService);
 
-			this._$q = $q;
-			this.$logService = $log;
-		}
+	    this._$q = $q;
+	    this.$logService = $log;
+	  }
 
-		_createClass(UserService, [{
-			key: '$onInit',
-			value: function $onInit() {
-				this.greeting = 'Are you ready to build on the MEAN Stack?';
-				this.$logService.info('I see you are looking at the console, interesting...');
-			}
-		}, {
-			key: 'getuser',
-			value: function getuser() {
-				return this._$q.when(new User());
-			}
-		}]);
+	  _createClass(UserService, [{
+	    key: '$onInit',
+	    value: function $onInit() {
+	      this.greeting = 'Are you ready to build on the MEAN Stack?';
+	      this.$logService.info('I see you are looking at the console, interesting...');
+	    }
+	  }, {
+	    key: 'getuser',
+	    value: function getuser() {
+	      return this._$q.when(new User());
+	    }
+	  }]);
 
-		return UserService;
+	  return UserService;
 	}();
 
 	exports.default = UserService;
@@ -32785,7 +32785,7 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -32809,29 +32809,29 @@
 	    this.$q = $q;
 	    this.$rootScope = $rootScope;
 	    this.currentUser = null;
-	    this.users = [{ "id": 0, "name": "Seth" }, { "id": 1, "name": "John" }, { "id": 2, "name": "Walley" }];
+	    this.users = [{ 'id': 0, 'name': 'Seth' }, { 'id': 1, 'name': 'John' }, { 'id': 2, 'name': 'Walley' }];
 	  }
 
 	  _createClass(UserModel, [{
-	    key: "getUsers",
+	    key: 'getUsers',
 	    value: function getUsers() {
 	      return this.$q.when(this.users);
 	    }
 	  }, {
-	    key: "setCurrentUser",
+	    key: 'setCurrentUser',
 	    value: function setCurrentUser(user) {
 	      this.currentUser = user;
 	      this.$rootScope.$broadcast('onCurrentUserUpdated');
 	    }
 	  }, {
-	    key: "getCurrentUser",
+	    key: 'getCurrentUser',
 	    value: function getCurrentUser() {
 	      return this.currentUser;
 	    }
 	  }, {
-	    key: "getName",
-	    value: function getName() {
-	      return "World";
+	    key: 'getUser',
+	    value: function getUser() {
+	      return 'World';
 	    }
 	  }]);
 
@@ -32875,7 +32875,7 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -32885,27 +32885,27 @@
 	/* You could also export multiple functions (or classes) from one file. */
 
 	var TextFilters = function () {
-		function TextFilters() {
-			_classCallCheck(this, TextFilters);
-		}
+	  function TextFilters() {
+	    _classCallCheck(this, TextFilters);
+	  }
 
-		_createClass(TextFilters, [{
-			key: "UpperFilter",
-			value: function UpperFilter() {
-				return function (input) {
-					return input.toUpperCase();
-				};
-			}
-		}, {
-			key: "LowerFilter",
-			value: function LowerFilter() {
-				return function (input) {
-					return input.toLowerCase();
-				};
-			}
-		}]);
+	  _createClass(TextFilters, [{
+	    key: "UpperFilter",
+	    value: function UpperFilter() {
+	      return function (input) {
+	        return input.toUpperCase();
+	      };
+	    }
+	  }, {
+	    key: "LowerFilter",
+	    value: function LowerFilter() {
+	      return function (input) {
+	        return input.toLowerCase();
+	      };
+	    }
+	  }]);
 
-		return TextFilters;
+	  return TextFilters;
 	}();
 
 	exports.default = TextFilters;
