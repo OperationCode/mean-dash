@@ -1,0 +1,17 @@
+<form class="favorite-teams">
+  {{$ctrl.greeting}}
+
+  <div class="favoriteTeams-input">Football Team <input ng-model="$ctrl.footballTeam"></div>
+  <div class="favoriteTeams-input">Baseball Team <input ng-model="$ctrl.baseballTeam"></div>
+  <div class="favoriteTeams-input">Basketball Team <input ng-model="$ctrl.basketballTeam"></div>
+
+  <button ng-click="$ctrl.submit()">Submit</button>
+
+  <div ng-if="$ctrl.allTeamsWereInput">
+    YOUR TEAMS ARE:
+    <football-team team="$ctrl.footballTeam"></football-team>
+    <baseball-team team="$ctrl.baseballTeam"></baseball-team>
+    <basketball-team team="$ctrl.basketballTeam"></basketball-team>
+  </div>
+
+</div>

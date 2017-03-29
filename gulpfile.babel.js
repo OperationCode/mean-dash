@@ -40,7 +40,7 @@ gulp.task('serve', ['webpack'], () => {
     port: process.env.PORT || 5000,
     server: { baseDir: root },
     domain: '0.0.0.0',
-    open: false
+    open: true
   })
 })
 

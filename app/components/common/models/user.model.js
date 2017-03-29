@@ -2,9 +2,8 @@
   Model classes can be exported and imported directly (not using AngularJS' dependency injection).
 */
 
-class UserModel {
+export class UserModel {
   constructor ($q, $rootScope) {
-    'ngInject'
 
     this.$q = $q
     this.$rootScope = $rootScope
@@ -33,5 +32,3 @@ class UserModel {
     return 'World'
   }
 }
-
-export default UserModel

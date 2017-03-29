@@ -1,0 +1,11 @@
+{
+	"env": {
+		"browser": true
+	},
+   "globals": {
+    	"Promise": true,
+    	"angular": true,
+    	"_": true,
+    	"$": true
+    }
+}
