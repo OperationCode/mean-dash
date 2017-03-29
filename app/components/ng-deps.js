@@ -3,7 +3,7 @@ module.exports = [
 	'ng-hack.filter',
 	'ng-hack.route',
 	'ng-hack.ui',
-	'account',
+	// 'account',
 	// 'admin',
 	// 'answer',
 	// 'appointment',

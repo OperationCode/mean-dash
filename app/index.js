@@ -4,11 +4,12 @@
 */
 //import angular from 'angular'
 
-import CommonModule from './common/common'
-import registerFavoriteTeams from './components/demo'
-
-let ngModule = angular.module('app', ['ngMaterial', 'appCommon', 'favorite-teams'])
-	.component('commonModule', CommonModule)
-	.run (() => {
-		console.log('App is running!')
-	})
+// import CommonModule from './components/common'
+// import registerFavoriteTeams from './components/demo'
+//
+// let ngModule = angular.module('app', ['ngMaterial'])
+// 	.component('commonModule', CommonModule)
+// 	.component('favorite-teams' FavoriteTeams)
+// 	.run (() => {
+// 		console.log('App is running!')
+// 	})

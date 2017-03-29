@@ -37,6 +37,13 @@ angular.module('app.routes', []).config(['$routeProvider', '$analyticsProvider',
 				title: 'Reports'
 			}
 		})
+    .when('/demo', {
+      templateUrl: '/components/demo/favorite-teams.html',
+      ga: {
+        page: '/reports',
+        title: 'Reports'
+      }
+    })
 		.when('/report/:reportId/edit', {
 			templateUrl: '/components/report/edit/report-edit.html',
 			ga: {

@@ -56,7 +56,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var appDependencies = ['ngRoute', 'ngSanitize', 'ui.bootstrap'
+	var appDependencies = ['ngRoute', 'ngSanitize', 'ui.bootstrap', 'ngMaterial'
 	// 'angular-redactor',
 	// 'angularFileUpload',
 	// 'angulartics',
@@ -68,7 +68,9 @@
 
 	var app = angular.module('app', appDependencies.concat(opcDependencies));
 
-	var ngModule = angular.module('app', ['ngMaterial', 'appCommon', 'favorite-teams']).component('commonModule', _common2.default).run(function () {
+	var ngModule = angular.module('app', [])
+	//.component('commonModule', CommonModule)
+	.run(function () {
 		console.log('App is running!');
 	});
 
@@ -92,7 +94,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var CommonModule = angular.module('appCommon', []).factory('UserService', _user2.default).factory('UserModel', _user4.default);
+	var CommonModule = angular.module('appCommon', []).component('UserService', _user2.default).component('UserModel', _user4.default);
 
 	exports.default = CommonModule;
 
@@ -397,7 +399,8 @@
 
 	'use strict';
 
-	module.exports = ['ng-hack.core', 'ng-hack.filter', 'ng-hack.route', 'ng-hack.ui', 'account',
+	module.exports = ['ng-hack.core', 'ng-hack.filter', 'ng-hack.route', 'ng-hack.ui',
+	// 'account',
 	// 'admin',
 	// 'answer',
 	// 'appointment',
