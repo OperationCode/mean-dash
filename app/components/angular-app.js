@@ -5,20 +5,14 @@ var appDependencies = [
 	'ngSanitize',
 	'ui.bootstrap',
   'ngMaterial'
-	// 'angular-redactor',
-	// 'angularFileUpload',
-	// 'angulartics',
-	// 'cfp.hotkeys',
-	// 'autoGrow'
 ];
 
-var opcDependencies = require('./ng-deps');
-
+var opcDependencies = require('./ng-deps')
 
 var app = angular.module('app', appDependencies.concat(opcDependencies))
 
 const ngModule = angular.module('app', [])
-	//.component('commonModule', CommonModule)
+	.component('commonModule', CommonModule)
 	.run (() => {
 		console.log('App is running!')
 	})

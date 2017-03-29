@@ -56,21 +56,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var appDependencies = ['ngRoute', 'ngSanitize', 'ui.bootstrap', 'ngMaterial'
-	// 'angular-redactor',
-	// 'angularFileUpload',
-	// 'angulartics',
-	// 'cfp.hotkeys',
-	// 'autoGrow'
-	];
+	var appDependencies = ['ngRoute', 'ngSanitize', 'ui.bootstrap', 'ngMaterial'];
 
 	var opcDependencies = __webpack_require__(10);
 
 	var app = angular.module('app', appDependencies.concat(opcDependencies));
 
-	var ngModule = angular.module('app', [])
-	//.component('commonModule', CommonModule)
-	.run(function () {
+	var ngModule = angular.module('app', []).component('commonModule', _common2.default).run(function () {
 		console.log('App is running!');
 	});
 
@@ -399,37 +391,7 @@
 
 	'use strict';
 
-	module.exports = ['ng-hack.core', 'ng-hack.filter', 'ng-hack.route', 'ng-hack.ui',
-	// 'account',
-	// 'admin',
-	// 'answer',
-	// 'appointment',
-	'auto-save',
-	// 'util',
-	// 'changelog',
-	// 'chart',
-	// 'chart-review',
-	// 'checklist',
-	// 'clipboard',
-	// 'delog',
-	'demo',
-	// 'dash',
-	// 'event',
-	// 'form',
-	// 'invoice',
-	// 'message',
-	// 'nav',
-	// 'note',
-	// 'notification',
-	// 'office',
-	// 'patient',
-	// 'phone',
-	// 'provider',
-	// 'report',
-	'routes'
-	// 'sms',
-	// 'treatment'
-	];
+	module.exports = ['ng-hack.core', 'ng-hack.filter', 'ng-hack.route', 'ng-hack.ui', 'account', 'auto-save', 'demo', 'dash', 'nav', 'routes'];
 
 /***/ }
 /******/ ]);
