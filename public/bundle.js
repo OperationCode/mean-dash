@@ -66,6 +66,8 @@
 		console.log('App is running!');
 	});
 
+	(0, _demo2.default)(ngModule);
+
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
@@ -210,7 +212,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -218,43 +220,43 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var FavoriteTeamsController = function () {
-	  function FavoriteTeamsController($log) {
-	    _classCallCheck(this, FavoriteTeamsController);
+	    function FavoriteTeamsController($log) {
+	        _classCallCheck(this, FavoriteTeamsController);
 
-	    this.$logService = $log;
-	  }
-
-	  _createClass(FavoriteTeamsController, [{
-	    key: '$onInit',
-	    value: function $onInit() {
-	      this.greeting = 'Enter your three favorite sports teams for each category and click Submit';
-	      this.$logService.info('Enter your teams and stop looking at the console');
+	        this.$logService = $log;
 	    }
-	  }, {
-	    key: 'submit',
-	    value: function submit() {
-	      this.allTeamsWereInput = this.footballTeam && this.basketballTeam && this.baseballTeam;
-	    }
-	  }]);
 
-	  return FavoriteTeamsController;
+	    _createClass(FavoriteTeamsController, [{
+	        key: '$onInit',
+	        value: function $onInit() {
+	            this.greeting = 'Enter your three favorite sports teams for each category and click Submit';
+	            this.$logService.info('Enter your teams and stop looking at the console');
+	        }
+	    }, {
+	        key: 'submit',
+	        value: function submit() {
+	            this.allTeamsWereInput = this.footballTeam && this.basketballTeam && this.baseballTeam;
+	        }
+	    }]);
+
+	    return FavoriteTeamsController;
 	}();
 
 	var FavoriteTeams = {
-	  bindings: {},
-	  template: __webpack_require__(6), // could also inline it, just trying this out
-	  controller: FavoriteTeamsController
+	    bindings: {},
+	    template: __webpack_require__(6), // could also inline it, just trying this out
+	    controller: FavoriteTeamsController
 	};
 
 	exports.default = function (ngModule) {
-	  ngModule.component('favoriteTeams', FavoriteTeams);
+	    ngModule.component('favoriteTeams', FavoriteTeams);
 	};
 
 /***/ },
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = "<form class=\"favorite-teams\">\n  {{$ctrl.greeting}}\n\n  <div class=\"favoriteTeams-input\">Football Team <input ng-model=\"$ctrl.footballTeam\"></div>\n  <div class=\"favoriteTeams-input\">Baseball Team <input ng-model=\"$ctrl.baseballTeam\"></div>\n  <div class=\"favoriteTeams-input\">Basketball Team <input ng-model=\"$ctrl.basketballTeam\"></div>\n\n  <button ng-click=\"$ctrl.submit()\">Submit</button>\n\n  <div ng-if=\"$ctrl.allTeamsWereInput\">\n    YOUR TEAMS ARE:\n    <football-team team=\"$ctrl.footballTeam\"></football-team>\n    <baseball-team team=\"$ctrl.baseballTeam\"></baseball-team>\n    <basketball-team team=\"$ctrl.basketballTeam\"></basketball-team>\n  </div>\n\n</div>\n"
+	module.exports = "<form class=\"favorite-teams\">\r\n  {{$ctrl.greeting}}\r\n\r\n  <div class=\"favoriteTeams-input\">Football Team <input ng-model=\"$ctrl.footballTeam\"></div>\r\n  <div class=\"favoriteTeams-input\">Baseball Team <input ng-model=\"$ctrl.baseballTeam\"></div>\r\n  <div class=\"favoriteTeams-input\">Basketball Team <input ng-model=\"$ctrl.basketballTeam\"></div>\r\n\r\n  <button ng-click=\"$ctrl.submit()\">Submit</button>\r\n\r\n  <div ng-if=\"$ctrl.allTeamsWereInput\">\r\n    YOUR TEAMS ARE:\r\n    <football-team team=\"$ctrl.footballTeam\"></football-team>\r\n    <baseball-team team=\"$ctrl.baseballTeam\"></baseball-team>\r\n    <basketball-team team=\"$ctrl.basketballTeam\"></basketball-team>\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ },
 /* 7 */
@@ -263,7 +265,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -271,32 +273,32 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var FootballTeamController = function () {
-	  function FootballTeamController($log) {
-	    _classCallCheck(this, FootballTeamController);
+	    function FootballTeamController($log) {
+	        _classCallCheck(this, FootballTeamController);
 
-	    this.$logService = $log;
-	  }
-
-	  _createClass(FootballTeamController, [{
-	    key: '$onInit',
-	    value: function $onInit() {
-	      this.$logService.info('This component displays the football team entered');
+	        this.$logService = $log;
 	    }
-	  }]);
 
-	  return FootballTeamController;
+	    _createClass(FootballTeamController, [{
+	        key: '$onInit',
+	        value: function $onInit() {
+	            this.$logService.info('This component displays the football team entered');
+	        }
+	    }]);
+
+	    return FootballTeamController;
 	}();
 
 	var FootballTeam = {
-	  bindings: {
-	    team: '='
-	  },
-	  template: '<div>{{$ctrl.team}}</div>',
-	  controller: FootballTeamController
+	    bindings: {
+	        team: '='
+	    },
+	    template: '<div>{{$ctrl.team}}</div>',
+	    controller: FootballTeamController
 	};
 
 	exports.default = function (ngModule) {
-	  ngModule.component('footballTeam', FootballTeam);
+	    ngModule.component('footballTeam', FootballTeam);
 	};
 
 /***/ },
@@ -306,7 +308,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -314,32 +316,32 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var BasketballTeamController = function () {
-	  function BasketballTeamController($log) {
-	    _classCallCheck(this, BasketballTeamController);
+	    function BasketballTeamController($log) {
+	        _classCallCheck(this, BasketballTeamController);
 
-	    this.$logService = $log;
-	  }
-
-	  _createClass(BasketballTeamController, [{
-	    key: '$onInit',
-	    value: function $onInit() {
-	      this.$logService.info('This component displays the basketball team entered');
+	        this.$logService = $log;
 	    }
-	  }]);
 
-	  return BasketballTeamController;
+	    _createClass(BasketballTeamController, [{
+	        key: '$onInit',
+	        value: function $onInit() {
+	            this.$logService.info('This component displays the basketball team entered');
+	        }
+	    }]);
+
+	    return BasketballTeamController;
 	}();
 
 	var BasketballTeam = {
-	  bindings: {
-	    team: '='
-	  },
-	  template: '<div>{{$ctrl.team}}</div>',
-	  controller: BasketballTeamController
+	    bindings: {
+	        team: '='
+	    },
+	    template: '<div>{{$ctrl.team}}</div>',
+	    controller: BasketballTeamController
 	};
 
 	exports.default = function (ngModule) {
-	  ngModule.component('basketballTeam', BasketballTeam);
+	    ngModule.component('basketballTeam', BasketballTeam);
 	};
 
 /***/ },
@@ -349,7 +351,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -357,32 +359,32 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var BaseballTeamController = function () {
-	  function BaseballTeamController($log) {
-	    _classCallCheck(this, BaseballTeamController);
+	    function BaseballTeamController($log) {
+	        _classCallCheck(this, BaseballTeamController);
 
-	    this.$logService = $log;
-	  }
-
-	  _createClass(BaseballTeamController, [{
-	    key: '$onInit',
-	    value: function $onInit() {
-	      this.$logService.info('This component displays the baseball team entered');
+	        this.$logService = $log;
 	    }
-	  }]);
 
-	  return BaseballTeamController;
+	    _createClass(BaseballTeamController, [{
+	        key: '$onInit',
+	        value: function $onInit() {
+	            this.$logService.info('This component displays the baseball team entered');
+	        }
+	    }]);
+
+	    return BaseballTeamController;
 	}();
 
 	var BaseballTeam = {
-	  bindings: {
-	    team: '='
-	  },
-	  template: '<div>{{$ctrl.team}}</div>',
-	  controller: BaseballTeamController
+	    bindings: {
+	        team: '='
+	    },
+	    template: '<div>{{$ctrl.team}}</div>',
+	    controller: BaseballTeamController
 	};
 
 	exports.default = function (ngModule) {
-	  ngModule.component('baseballTeam', BaseballTeam);
+	    ngModule.component('baseballTeam', BaseballTeam);
 	};
 
 /***/ },

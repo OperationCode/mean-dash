@@ -16,3 +16,5 @@ const ngModule = angular.module('app', [])
 	.run (() => {
 		console.log('App is running!')
 	})
+
+registerFavoriteTeams(ngModule)
