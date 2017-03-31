@@ -42,3 +42,6 @@ config
 .env.sh
 .env.js
 env
+
+# Webpack output
+public/
