@@ -15,7 +15,7 @@ class FavoriteTeamsController {
 
 const FavoriteTeams = {
     bindings: {},
-    template: require('./favorite-teams.html'),  // could also inline it, just trying this out
+    template: require('./favorite-teams.html'),
     controller: FavoriteTeamsController
 }
 

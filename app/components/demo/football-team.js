@@ -13,7 +13,7 @@ const FootballTeam = {
     bindings: {
         team: '='
     },
-    template: '<div>{{$ctrl.team}}</div>',
+    template: '<div> Football Team: {{$ctrl.team}}</div>',
     controller: FootballTeamController
 }
 
