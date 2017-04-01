@@ -13,12 +13,8 @@ class FavoriteTeamsController {
     }
 }
 
-const FavoriteTeams = {
+export default {
     bindings: {},
-    template: require('./favorite-teams.html'),  // could also inline it, just trying this out
+    template: require('./favorite-teams.html'),
     controller: FavoriteTeamsController
-}
-
-export default ngModule => {
-  ngModule.component('favoriteTeams',  FavoriteTeams);
 }

@@ -9,19 +9,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="description" content="A dashboard built with the MEAN stack">
     <link rel="icon" href="img/logo.svg">
-    <link href="/css/angular-material.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <base href="/">
   </head>
   <body ng-app="app">
-
-      <center><h1>Loading...</h1></center>
-      <favorite-teams></favorite-teams>
-    <script src="/js/angular.js"></script>
-    <script src="/js/angular-animate.js"></script>
-    <script src="/js/angular-aria.js"></script>
-    <script src="/js/angular-material.js"></script>
-
-    <script src="bundle.js"></script>
+      <div ng-view></div>
+    <script src="vendor.bundle.js"></script>
+    <script src="app.bundle.js"></script>
   </body>
 </html>

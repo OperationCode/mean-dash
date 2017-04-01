@@ -6,17 +6,12 @@ class BaseballTeamController {
     $onInit() {
       this.$logService.info('This component displays the baseball team entered');
     }
-
 }
 
-const BaseballTeam = {
+export default {
     bindings: {
         team: '='
     },
-    template: '<div>{{$ctrl.team}}</div>',
+    template: '<div>Baseball Team: {{$ctrl.team}}</div>',
     controller: BaseballTeamController
-}
-
-export default ngModule => {
-  ngModule.component('baseballTeam',  BaseballTeam);
 }
