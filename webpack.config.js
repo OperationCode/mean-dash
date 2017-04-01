@@ -8,7 +8,7 @@ var config = {
   },
   output: {
     path: __dirname + './public',
-    filename: '[name].js'
+    filename: '[name].bundle.js'
   },
 
   plugins: [

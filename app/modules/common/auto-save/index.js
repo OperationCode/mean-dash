@@ -1,6 +1,6 @@
-import AutoSaveFormDirective from './directive/auto-save-form.directive';
-import AutoSaveItemDirective from './directive/auto-save-item.directive';
+import AutoSaveFormDirective from './directives/auto-save-form.directive';
+import AutoSaveItemDirective from './directives/auto-save-item.directive';
 
-angular.module('appDirectives', [])
+angular.module('app.autoSave', [])
 	.directive('AutoSaveForm', AutoSaveFormDirective)
-	.directive('AutoSave', AutoSaveItemDirective);
+	.directive('AutoSaveItem', AutoSaveItemDirective);

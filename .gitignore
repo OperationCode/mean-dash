@@ -44,4 +44,4 @@ config
 env
 
 # Webpack output
-public/
+public/*.js
