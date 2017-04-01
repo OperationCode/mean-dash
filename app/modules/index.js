@@ -1,8 +1,0 @@
-import './account'
-import './common'
-import './dash'
-import './demo'
-import './home'
-import './main'
-import './nav'
-import './user'
