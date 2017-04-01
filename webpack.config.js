@@ -1,11 +1,14 @@
 var webpack = require('webpack')
 
 var config = {
-  context: __dirname + '/app/components',
-  entry: './angular-app.js',
+  context: __dirname + '/app',
+  entry: {
+    'app': './angular-app.js',
+    'vendor': './vendors.js'
+  },
   output: {
     path: __dirname + './public',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
 
   plugins: [
