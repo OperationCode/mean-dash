@@ -9,7 +9,7 @@ export default angular.module('app.routes', ['ngRoute']).config(['$routeProvider
 			template: '<favorite-teams></favorite-teams>'
 		})
 
-		// these routes can be added later
+		// these routes can be added later, paths are incorrect
 		.when('/login', {
 			templateUrl: '/components/account/login.html',
 		})

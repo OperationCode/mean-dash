@@ -1,9 +1,7 @@
-import routes from './routes'
-import registerDemoComponents from './components/demo';
+import routes from './modules/routes'
+import demo from './modules/demo'
 
-const ngModule = angular.module('app', ['app.routes'])
+const ngModule = angular.module('app', ['app.routes', 'app.demo'])
 	.run (() => {
 		console.log('App is running!')
 	});
-
-registerDemoComponents(ngModule);
