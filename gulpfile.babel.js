@@ -20,7 +20,7 @@ const paths = {
     resolveToApp('**/*.html'),
     path.join(root, 'index.html')
   ],
-  entry: path.join('app/index.js'),  // not sure if the entry should start at the /public path ?
+  entry: path.join('app/angular-app.js'),  // not sure if the entry should start at the /public path ?
   output: root
 }
 
