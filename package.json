@@ -9,9 +9,10 @@
     "build": "node node_modules/.bin/webpack && cp app/index.html public/index.html",
     "test": "mocha --require babel-register",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "prepublish": "npm run build",
+    "prepublish": "npm run snyk-protect; npm run build",
     "fix": "standard --fix",
-    "server": "http-server -a '0.0.0.0' -p '5000'"
+    "server": "http-server -a '0.0.0.0' -p '5000'",
+    "snyk-protect": "snyk protect"
   },
   "engines": {
     "node": ">=0.8.6"
@@ -77,7 +78,8 @@
     "webpack": "^2.3.2",
     "webpack-core": "^0.5.0",
     "webpack-dev-server": "^1.7.0",
-    "webpack-stream": "^3.2.0"
+    "webpack-stream": "^3.2.0",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "assert": "^1.4.1",
@@ -105,5 +107,6 @@
     "supertest": "^3.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
-  }
+  },
+  "snyk": true
 }
