@@ -1,6 +1,19 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
-ignore: {}
+version: v1.10.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:fresh:20170908':
+    - browser-sync > serve-static > send > fresh:
+        reason: None given
+        expires: '2018-03-04T10:11:15.865Z'
+  'npm:parsejson:20170908':
+    - karma > socket.io > socket.io-client > engine.io-client > parsejson:
+        reason: None given
+        expires: '2018-03-04T10:11:15.865Z'
+  'npm:shelljs:20140723':
+    - jshint > shelljs:
+        reason: None given
+        expires: '2018-03-04T10:11:15.866Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:debug:20170905':
@@ -42,3 +55,24 @@ patch:
         patched: '2017-09-28T00:03:35.919Z'
     - browser-sync > socket.io > socket.io-adapter > socket.io-parser > debug:
         patched: '2017-09-28T00:03:35.919Z'
+  'npm:minimatch:20160620':
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2018-02-02T10:11:15.877Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2018-02-02T10:11:15.877Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2018-02-02T10:11:15.877Z'
+  'npm:ms:20170412':
+    - browser-sync > connect > debug > ms:
+        patched: '2018-02-02T10:11:15.877Z'
+    - browser-sync > connect > finalhandler > debug > ms:
+        patched: '2018-02-02T10:11:15.877Z'
+    - browser-sync > serve-index > debug > ms:
+        patched: '2018-02-02T10:11:15.877Z'
+    - browser-sync > serve-static > send > ms:
+        patched: '2018-02-02T10:11:15.877Z'
+    - browser-sync > serve-static > send > debug > ms:
+        patched: '2018-02-02T10:11:15.877Z'
+  'npm:qs:20170213':
+    - browser-sync > qs:
+        patched: '2018-02-02T10:11:15.877Z'
