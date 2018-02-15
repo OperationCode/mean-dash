@@ -52,7 +52,7 @@
     "js-yaml": "^3.8.2",
     "jshint": "2.9.3",
     "jshint-loader": "^0.8.3",
-    "karma": "0.13.5",
+    "karma": "2.0.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.7",
     "karma-mocha": "^0.1.10",
@@ -79,7 +79,7 @@
     "webpack-core": "^0.5.0",
     "webpack-dev-server": "^1.7.0",
     "webpack-stream": "^3.2.0",
-    "snyk": "^1.41.1"
+    "snyk": "^1.69.7"
   },
   "devDependencies": {
     "assert": "^1.4.1",
