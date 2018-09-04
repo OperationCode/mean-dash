@@ -1,4 +1,7 @@
 # mean-dash
+
+## NOTE - This is no longer under active development or maintenance, use at your own risk.
+
 ### An admin dashboard with user management and user roles | Built on the MEAN stack
 -----
 [![CircleCI](https://circleci.com/gh/OperationCode/mean-dash.svg?style=svg&circle-token=036f5785d1406e7ac8b90abf3107244ce3a778fa)](https://circleci.com/gh/OperationCode/mean-dash)
